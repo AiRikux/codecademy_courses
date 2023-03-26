@@ -53,7 +53,12 @@ for link in links:
 	# Add your code here:
 	# Name
 	# return as a list so we need to access the inside and get the string
-	turtle_name = turtle.select(".name")[0].string
-	turtle_data[turtle_name] = []
+	turtle_name = turtle.select(".name")[0].get_text()
+	# get ul then get text with separator only to split it later on
+	turtle_data[turtle_name] = turtle.find("ul").get_text(' | ').split(' | ')
 
+# create dataframe from dictionary
+import pandas as pd
+turtle_df = pd.DataFrame(turtle_data)
+# data needs more cleaning to be usable
 
