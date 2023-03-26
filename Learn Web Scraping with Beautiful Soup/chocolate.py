@@ -35,10 +35,25 @@ companies = []
 for comp in soup.select(".Company")[1:]:
 	companies.append(comp.get_text())
 # create dataframe with companies and ratings only
-chocolate_df = pd.DataFrame(list(zip(companies, ratings)), columns=["Companies", "Ratings"])
+df = pd.DataFrame(list(zip(companies, ratings)), columns=["Company", "Rating"])
 # groupby company to see average
-print(chocolate_df.groupby("Companies").mean().nlargest(10, 'Ratings'))
+df.groupby("Company").mean().nlargest(10, 'Rating')
 
 # 6 Is more cacao better?
 # get CocoaPercent values
-cocoaper = []
+cocoa_percent = []
+# skip first value as it is a heading
+for cocoa in soup.select(".CocoaPercent")[1:]:
+	cocoa_percent.append(float(cocoa.get_text()[:-1]))
+# add column to dataframe
+df["CocoaPercentage"] = cocoa_percent
+
+plt.clf()
+plt.scatter(df.CocoaPercentage, df.Rating)
+z = np.polyfit(df.CocoaPercentage, df.Rating, 1)
+line_function = np.poly1d(z)
+plt.plot(df.CocoaPercentage, line_function(df.CocoaPercentage), "r--")
+# plt.show()
+
+# More Questions
+# Where are the best cocoa beans grown? Which countries produce the highest-rated bars?
