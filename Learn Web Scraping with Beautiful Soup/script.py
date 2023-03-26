@@ -61,4 +61,3 @@ for link in links:
 import pandas as pd
 turtle_df = pd.DataFrame(turtle_data)
 # data needs more cleaning to be usable
-
