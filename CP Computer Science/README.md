@@ -1,4 +1,4 @@
-# Codecademy
+# Career Path - Computer Science
 
 This is some part of my work as I'm doing the Computer Science Career Path by Codecademy.
 
