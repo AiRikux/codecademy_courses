@@ -6,6 +6,10 @@ Due to the difference in variable names I separate files that were created by me
 
 ## CS101: Introduction to Programming
 
+### Files
+
+This was a simple course that was added around April 2023 by Codecademy. Its a simple course but it gave me new insights on how to import a file. Thus, why I decide to include in my Repository for notes.
+
 ### Object Oriented Programming
 Here we learn about Classes. In the project hamster.py is where we learn to create a real-life scenario of a pet into a class. I chose hamsters because I have one cute hamster with me <3
 
