@@ -64,9 +64,6 @@ access_log = [{'time': '08:39:37', 'limit': 844404, 'address': '1.227.124.181'},
               {'time': '18:56:35', 'limit': 6207, 'address': '2.228.164.197'}]
 fields = ['time', 'address', 'limit']
 
-# import module
-import csv
-
 with open('logger.csv', 'w') as logger_csv:
 	log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
 
