@@ -22,8 +22,11 @@ Files:
 ### Final Project
 I am trying to make a Text Adventure game for the final project. Here I make a simple scenario where user need to buy an ice cream. Each choice will lead to a different path.
 
+Another project is Hacking The Fender. Where we practice updating files and it is a project for the Files chapter.
+
 Files:
 * ice_cream_shop.py
+* hacking_the_fender.py
 
 ## CS102: Data Structures and Algorithms
 
