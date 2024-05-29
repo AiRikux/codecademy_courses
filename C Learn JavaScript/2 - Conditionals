@@ -1,0 +1,17 @@
+// Learning If Statement
+let sale = false;
+
+if (sale) {
+  console.log("Time to buy!")
+}
+
+// If Else Statement
+let sale = true;
+
+sale = false;
+
+if(sale) {
+  console.log('Time to buy!');
+} else {
+  console.log('Time to wait for a sale.')
+}
